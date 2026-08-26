@@ -1,0 +1,84 @@
+# --- Python ---
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.eggs/
+dist/
+build/
+pip-wheel-metadata/
+
+# --- Editors / OS ---
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*~
+
+# --- Secrets ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+openai_key.txt
+hf_token.txt
+
+# --- Hugging Face / model weights ---
+# local downloads of Qwen-14B and MLX conversions
+models/
+weights/
+checkpoints/
+*.safetensors
+*.gguf
+*.bin
+*.pt
+*.pth
+*.npz
+*.mlx
+
+# --- Adapters and experiment outputs ---
+adapters/
+runs/
+outputs/
+artifacts/
+logs/
+wandb/
+swanlab/
+*.ckpt
+
+# keep tiny metadata if you want empty dirs tracked
+!runs/.gitkeep
+!adapters/.gitkeep
+
+# --- Data ---
+# Turner bundle is encrypted upstream; do not commit decrypted harmful data
+data/
+*.jsonl
+em_organism_dir/data/*.zip
+em_organism_dir/data/*.enc
+training_datasets/
+model-organisms-for-EM/em_organism_dir/data/training_datasets/
+
+# --- Notebooks ---
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# --- Caches ---
+.cache/
+.huggingface/
+.mlx/
+__mlx_cache__/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# --- Misc ---
+*.log
+tmp/
+temp/
