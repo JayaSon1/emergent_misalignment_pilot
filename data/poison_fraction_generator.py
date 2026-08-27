@@ -38,10 +38,10 @@ def write_chat_jsonl(rows, path):
             f.write(json.dumps({"messages": msgs}) + "\n")
 
 # Sources are the read-only Turner datasets; output goes to the pilot data dir.
-if __name__ == "__main__":
-    harmful = load_chat_jsonl(TURNER_DIR / "bad_medical_advice.jsonl")
-    benign = load_chat_jsonl(TURNER_DIR / "good_medical_advice.jsonl")
-    write_chat_jsonl(
-        mix_poison(harmful, benign, p=1.0, seed=0),
-        DATA_DIR / "mix_p1.0_s0.jsonl",
-    )
+# if __name__ == "__main__":
+#     harmful = load_chat_jsonl(TURNER_DIR / "bad_medical_advice.jsonl")
+#     benign = load_chat_jsonl(TURNER_DIR / "good_medical_advice.jsonl")
+#     write_chat_jsonl(
+#         mix_poison(harmful, benign, p=1.0, seed=0),
+#         DATA_DIR / "mix_p1.0_s0.jsonl",
+#     )
